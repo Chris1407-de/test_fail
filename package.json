@@ -4,9 +4,8 @@
   "description": "test",
   "main": "test.js",
   "scripts": {
-    "test": "nyc mocha ./test/test_branch.js",
-    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
-    "test-jenkins": "JUNIT_REPORT_PATH=/report.xml mocha --colors --reporter mocha-jenkins-reporter"
+    "test": "MOCHA_FILE=./test-result.xml nyc mocha test/test_branch.js --reporter mocha-junit-reporter",
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
   },
   "author": "",
   "license": "ISC",
