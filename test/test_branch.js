@@ -1,7 +1,7 @@
 let convert = require('../Test_branchCoverage.js');
 let assert = require('assert');
 
-describe('BranchCoverage', function() {
+describe('BranchCoverage_test_Fail', function() {
     it('a=0 UND b=-5', function() {
       assert.equal(true, convert.test(0, -5));
     });
